@@ -148,7 +148,7 @@ public class ResourceCentre {
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
 		String output = "";
 		// write your code here
-		//Done by Indra
+		// Done by Indra
 
 		for (int i = 0; i < chromebookList.size(); i++) {
 			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(),
@@ -185,16 +185,22 @@ public class ResourceCentre {
 		camcorderList.add(cc);
 		System.out.println("Camcorder added");
 	}
+	// write your code here
 
 	public static Chromebook inputChromebook() {
-		Chromebook cb = null;
-		// write your code here
+		String tag = Helper.readString("Enter asset tag > ");
+		String description = Helper.readString("Enter description > ");
+		String os = Helper.readString("Enter os > ");
+
+		Chromebook cb = new Chromebook(tag, description, os);
 		return cb;
 
 	}
 
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
-		// write your code here
+
+		chromebookList.add(cb);
+		System.out.println("Chromebook added");
 	}
 
 	// ================================= Option 3 Loan an item (CRUD - Update)
