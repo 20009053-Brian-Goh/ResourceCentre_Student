@@ -212,13 +212,13 @@ public class ResourceCentreTest {
 		
 		
 		ResourceCentre.returnChromebook(chromebookList);
-		assertFalse("Check Available is false", cb1.getIsAvailable());
+		assertFalse("Check Available is false", cc1.getIsAvailable());
 		
-		ResourceCentre.doReturnChromebook(chromebookList,cb1.getAssetTag());
-		ResourceCentre.doReturnChromebook(chromebookList,cb2.getAssetTag());
+		ResourceCentre.doReturnChromebook(chromebookList,cc1.getAssetTag());
+		ResourceCentre.doReturnChromebook(chromebookList,cc2.getAssetTag());
 		
-		assertEquals("Test for the availability of the chromebook is true", true, cb1.getIsAvailable());
-		assertEquals("Test for the availability of the chromebook is true", true, cb2.getIsAvailable());
+		assertEquals("Test for the availability of the chromebook is true", true, cc1.getIsAvailable());
+		assertEquals("Test for the availability of the chromebook is true", true, cc2.getIsAvailable());
 		
 		
 	}
