@@ -68,7 +68,7 @@ public class ResourceCentreTest {
 		
 
 		// Brian
-		
+
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 		ResourceCentre.addChromebook(chromebookList, cb1);
 		assertEquals("Test if that Chromebook arraylist size is 1?", 1, chromebookList.size());
@@ -176,7 +176,24 @@ public class ResourceCentreTest {
 	public void testDoLoanChromebook() {
 		// fail("Not yet implemented");
 		// write your code here
+<<<<<<< HEAD
 
+=======
+		// norish
+		// test that item list is not null so that an item can be loaned
+		assertNotNull("Test if there is valid Chromebook item to be loaned", chromebookList);
+
+		// test that tag is the same as the one in the chromebooklist
+		String tag = "";
+		String dueDate = "";
+		ResourceCentre.doLoanChromebook(chromebookList, tag, dueDate);
+		assertEquals("Test that tag matches with the one in chromebooklist", tag, chromebookList);
+
+		// test that item is available for loan
+		boolean isAvailable = true;
+		assertTrue(isAvailable);
+
+>>>>>>> branch 'master' of https://github.com/20009053-Brian-Goh/ResourceCentre_Student.git
 	}
 
 	@Test
