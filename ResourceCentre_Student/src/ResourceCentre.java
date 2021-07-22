@@ -188,6 +188,7 @@ public class ResourceCentre {
 
 	public static Chromebook inputChromebook() {
 		//Brian
+		
 		String tag = Helper.readString("Enter asset tag > ");
 		String description = Helper.readString("Enter description > ");
 		String os = Helper.readString("Enter os > ");
@@ -199,6 +200,7 @@ public class ResourceCentre {
 
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
 		//Brian
+		
 		chromebookList.add(cb);
 		System.out.println("Chromebook added");
 	}
