@@ -184,15 +184,18 @@ public class ResourceCentreTest {
 		// fail("Not yet implemented");
 		// write your code here
 
-		assertNotNull("Test if there is a valid Camcorder that can be returned", camcorderList);
-			String tag = "";
-			
-			
-			ResourceCentre.doReturnCamcorder(camcorderList, tag);
-			assertEquals("Test that tag matches the same one in camcorderlist", tag, camcorderList);
-			
-			boolean Available = true;
-			assertTrue(Available);
+		assertNotNull("Test if there is a valid Camcorder arraylist that Camcorder can be returned to", camcorderList);
+		
+		
+		
+		ResourceCentre.returnCamcorder(camcorderList);
+		assertFalse("Check Available is false", cb1.getIsAvailable());
+		
+		ResourceCentre.doReturnCamcorder(camcorderList,cb1.getAssetTag());
+		ResourceCentre.doReturnCamcorder(camcorderList,cb2.getAssetTag());
+		
+		assertEquals("Test for the availability of the Camcorder is true", true, cb1.getIsAvailable());
+		assertEquals("Test for the availability of the Camcorder is true", true, cb2.getIsAvailable());
 			
 
 
@@ -204,15 +207,20 @@ public class ResourceCentreTest {
 		// fail("Not yet implemented");
 		// write your code here
 		
-		assertNotNull("Test if there is a valid Chromebook that can be returned", chromebookList);
-		String tag = "";
+		assertNotNull("Test if there is a valid Chromebook arraylist that chromebook can be returned to", chromebookList);
 		
 		
-		ResourceCentre.doReturnChromebook(chromebookList, tag);
-		assertEquals("Test that tag matches the same one in chromebooklist", tag, chromebookList);
 		
-		boolean Available = true;
-		assertTrue(Available);
+		ResourceCentre.returnChromebook(chromebookList);
+		assertFalse("Check Available is false", cb1.getIsAvailable());
+		
+		ResourceCentre.doReturnChromebook(chromebookList,cb1.getAssetTag());
+		ResourceCentre.doReturnChromebook(chromebookList,cb2.getAssetTag());
+		
+		assertEquals("Test for the availability of the chromebook is true", true, cb1.getIsAvailable());
+		assertEquals("Test for the availability of the chromebook is true", true, cb2.getIsAvailable());
+		
+		
 	}
 
 	@After
