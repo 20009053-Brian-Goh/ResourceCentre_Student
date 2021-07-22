@@ -199,18 +199,19 @@ public class ResourceCentreTest {
 		// fail("Not yet implemented");
 		// write your code here
 
+		//test that arraylist is not null so item can be returned to
 		assertNotNull("Test if there is a valid Camcorder arraylist that Camcorder can be returned to", camcorderList);
 		
 		
-		
+		//
 		ResourceCentre.returnCamcorder(camcorderList);
-		assertFalse("Check Available is false", cb1.getIsAvailable());
+		assertFalse("Check Available is false", cc1.getIsAvailable());
 		
-		ResourceCentre.doReturnCamcorder(camcorderList,cb1.getAssetTag());
-		ResourceCentre.doReturnCamcorder(camcorderList,cb2.getAssetTag());
+		ResourceCentre.doReturnCamcorder(camcorderList,cc1.getAssetTag());
+		ResourceCentre.doReturnCamcorder(camcorderList,cc2.getAssetTag());
 		
-		assertEquals("Test for the availability of the Camcorder is true", true, cb1.getIsAvailable());
-		assertEquals("Test for the availability of the Camcorder is true", true, cb2.getIsAvailable());
+		assertEquals("Test for the availability of the Camcorder is true", true, cc1.getIsAvailable());
+		assertEquals("Test for the availability of the Camcorder is true", true, cc2.getIsAvailable());
 			
 
 
@@ -227,13 +228,13 @@ public class ResourceCentreTest {
 		
 		
 		ResourceCentre.returnChromebook(chromebookList);
-		assertFalse("Check Available is false", cc1.getIsAvailable());
+		assertFalse("Check Available is false", cb1.getIsAvailable());
 		
-		ResourceCentre.doReturnChromebook(chromebookList,cc1.getAssetTag());
-		ResourceCentre.doReturnChromebook(chromebookList,cc2.getAssetTag());
+		ResourceCentre.doReturnChromebook(chromebookList,cb1.getAssetTag());
+		ResourceCentre.doReturnChromebook(chromebookList,cb2.getAssetTag());
 		
-		assertEquals("Test for the availability of the chromebook is true", true, cc1.getIsAvailable());
-		assertEquals("Test for the availability of the chromebook is true", true, cc2.getIsAvailable());
+		assertEquals("Test for the availability of the chromebook is true", true, cb1.getIsAvailable());
+		assertEquals("Test for the availability of the chromebook is true", true, cb2.getIsAvailable());
 		
 		
 	}
