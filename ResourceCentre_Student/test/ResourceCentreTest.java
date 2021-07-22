@@ -95,7 +95,11 @@ public class ResourceCentreTest {
 	public void testDoLoanChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
+<<<<<<< HEAD
 		//Timothy
+=======
+		//norish
+>>>>>>> branch 'master' of https://github.com/20009053-Brian-Goh/ResourceCentre_Student.git
 	}
 	
 	@Test
