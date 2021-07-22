@@ -123,7 +123,7 @@ public class ResourceCentreTest {
 	public void testDoLoanCamcorder() {
 		//fail("Not yet implemented");
 		// write your code here
-		assertNotNull("Test if there is valid camcorder arraylist to add to", camcorderList);
+		
 		
 		
 	}
@@ -157,6 +157,16 @@ public class ResourceCentreTest {
 	public void testDoReturnChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
+		
+		assertNotNull("Test if there is a valid Chromebook that can be returned", chromebookList);
+		String tag = "";
+		
+		
+		ResourceCentre.doReturnChromebook(chromebookList, tag);
+		assertEquals("Test that tag matches the same one in chromebooklist", tag, chromebookList);
+		
+		boolean Available = true;
+		assertTrue(Available);
 	}
 	
 	@After
