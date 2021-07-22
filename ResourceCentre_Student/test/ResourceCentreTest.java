@@ -176,9 +176,7 @@ public class ResourceCentreTest {
 	public void testDoLoanChromebook() {
 		// fail("Not yet implemented");
 		// write your code here
-<<<<<<< HEAD
 
-=======
 		// norish
 		// test that item list is not null so that an item can be loaned
 		assertNotNull("Test if there is valid Chromebook item to be loaned", chromebookList);
@@ -193,7 +191,7 @@ public class ResourceCentreTest {
 		boolean isAvailable = true;
 		assertTrue(isAvailable);
 
->>>>>>> branch 'master' of https://github.com/20009053-Brian-Goh/ResourceCentre_Student.git
+
 	}
 
 	@Test
